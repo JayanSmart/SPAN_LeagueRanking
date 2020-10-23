@@ -1,70 +1,95 @@
+"""
+A simple CLI application which calculates the ranking table of a soccer league
+given the results of every match.
+
+Author: Jayan Smart <jayandrinsmart@gmail.com>
+"""
 
 
-points = {}
+def process_result(result, standings):
+    """Process a singe match result and update the global standings accordingly.
+    3 points for a win, 0 for a loss and 1 point to each team for a draw.
 
-
-def process_result(result):
+    Args:
+        result (String): Single match result using the format: 
+        <Team 1> <Score>, <Team 2> <Score>
+    """
     result = result.split(', ')
     team1 = " ".join(result[0].split()[:-1])
     team2 = " ".join(result[1].split()[:-1])
     team1_score = result[0].split()[-1]
     team2_score = result[1].split()[-1]
 
-    if not team1 in points:
-        points[team1] = 0
-    
-    if not team2 in points:
-        points[team2] = 0
+    if team1 not in standings:
+        standings[team1] = 0
 
+    if team2 not in standings:
+        standings[team2] = 0
+
+    # Team 1 wins, so no points for team 2
     if team1_score > team2_score:
-        points[team1] += 3
-
+        standings[team1] += 3
+    # Team 2 wins, so no points for team 1
     elif team2_score > team1_score:
-        points[team2] += 3
-    
+        standings[team2] += 3
+    # Draw, so 1 point for each team
     else:
-        # We know this is a draw
-        points[team1] += 1
-        points[team2] += 1
+        standings[team1] += 1
+        standings[team2] += 1
 
-def print_standings():
-    for i in points:
-        print(i[0], i[1])
+    return standings
 
-if __name__ == "__main__":
-    
-    line = input("Enter match results, one game per line. An empty line denotes completion:\n")
+
+def sort_standings(standings):
+    """Sorts the standings from the team with the most points
+    to the team with the least points. Ties are sorted alphabetically.
+
+    Args:
+        standings (Dict): A dictionary of eache team and their assossiated
+        score in the league.
+
+    Returns:
+        List: A sorted list of Touples.
+    """
+
+    # Runs the sorted function using a custom sort key:
+    # The key first sorts the scores in ascending order, but as negatives
+    # (effectivly decending order). As a tie breaker the items are sorted in
+    # alphabetical order.
+    return sorted(standings.items(), key=lambda x: (-x[1], x[0].lower()))
+
+
+def print_standings(standings):
+    position = 0
+    delta = 1
+    current_score = None
+    for team in standings:
+        # Check if we should increment position or not
+        if current_score is None or team[1] < current_score:
+            position += delta
+            delta = 1
+            current_score = team[1]
+        else:
+            delta += 1
+
+        if team[1] == 1:
+            print("{}. {}, {} pt".format(position, team[0], team[1]))
+        else:
+            print("{}. {}, {} pts".format(position, team[0], team[1]))
+
+
+def main():
+    standings = {}
+
+    line = input(
+        "Enter match results, one game per line. An empty line denotes completion:\n")
 
     while(line != ""):
-        process_result(line)
+        standings = process_result(line, standings)
         line = input()
-
-    # This is not something I am super happy with, as we need to sort the list twice.
-    # First alphabetically, then by decending score. The reason this works is that the 
-    # sorted() function maintains original order in the event of ties. 
-    # 
-    # I would prefer a solution like: 
-    # points  = sorted(points.items(), key=lambda x: (x[1], x[0].lower()), reverse=True)
-    # 
-    # But the revese=True here is needed for the score but then breaks the alphabetical tie break. 
-    alpha = sorted(points.items(), key=lambda x: x[0].lower(), reverse=False)
-    points  = sorted(alpha, key=lambda x: x[1], reverse=True)
-
-    print_standings()
+    standings = sort_standings(standings)
+    print_standings(standings)
 
 
-"""
-Lions 3, Snakes 3
-Tarantulas 1, FC Awesome 0
-Lions 1, FC Awesome 1
-Tarantulas 3, Snakes 1
-Lions 4, Grouches 0
-My Awesome Team FC 20, Tarantulas 99
-q 1, w 1
-f 1, t 1
-d 1, e 1
-z 1, x 1
-y 1, v 1
-AAA 1, aaa 1
-bbb 1, BBB 1
-"""
+if __name__ == "__main__":
+    main()
