@@ -2,9 +2,17 @@
 A simple CLI application which calculates the ranking table of a soccer league
 given the results of every match.
 
+This is my prefered implimentation. This problem does not warrent going for an
+OO style of code.
+
+I am implimenting an OO approach, to show my proficiency. See league_object.py
+
 Author: Jayan Smart <jayandrinsmart@gmail.com>
 """
 
+
+POINTS_WON  = 3
+POINTS_DRAW = 1
 
 def process_result(result, standings):
     """Process a singe match result and update the global standings accordingly.
@@ -12,7 +20,7 @@ def process_result(result, standings):
 
     Args:
         result (String): Single match result using the format: 
-        <Team 1> <Score>, <Team 2> <Score>
+        [Team 1] [Score], [Team 2] [Score]
     """
     result = result.split(', ')
     team1 = " ".join(result[0].split()[:-1])
@@ -28,14 +36,14 @@ def process_result(result, standings):
 
     # Team 1 wins, so no points for team 2
     if team1_score > team2_score:
-        standings[team1] += 3
+        standings[team1] += POINTS_WON
     # Team 2 wins, so no points for team 1
     elif team2_score > team1_score:
-        standings[team2] += 3
+        standings[team2] += POINTS_WON
     # Draw, so 1 point for each team
     else:
-        standings[team1] += 1
-        standings[team2] += 1
+        standings[team1] += POINTS_DRAW
+        standings[team2] += POINTS_DRAW
 
     return standings
 
@@ -56,7 +64,7 @@ def sort_standings(standings):
     # The key first sorts the scores in ascending order, but as negatives
     # (effectivly decending order). As a tie breaker the items are sorted in
     # alphabetical order.
-    return sorted(standings.items(), key=lambda x: (-x[1], x[0].lower()))
+    return dict(sorted(standings.items(), key=lambda x: (-x[1], x[0].lower())))
 
 
 def print_standings(standings):
@@ -65,17 +73,17 @@ def print_standings(standings):
     current_score = None
     for team in standings:
         # Check if we should increment position or not
-        if current_score is None or team[1] < current_score:
+        if current_score is None or standings[team] < current_score:
             position += delta
             delta = 1
-            current_score = team[1]
+            current_score = standings[team]
         else:
             delta += 1
 
-        if team[1] == 1:
-            print("{}. {}, {} pt".format(position, team[0], team[1]))
+        if standings[team] == 1:
+            print("{}. {}, {} pt".format(position, team, standings[team]))
         else:
-            print("{}. {}, {} pts".format(position, team[0], team[1]))
+            print("{}. {}, {} pts".format(position, team, standings[team]))
 
 
 def main():

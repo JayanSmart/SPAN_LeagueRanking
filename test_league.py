@@ -1,16 +1,16 @@
 import unittest
+import subprocess
+import unittest.mock
+import io
 
 import league
 
 
 class TestProcessResult(unittest.TestCase):
-    """
-    Test that single-line matches have the scores processed correctly
-    """
+    """Test that single-line matches have the scores processed correctly"""
 
     def test_given_input(self):
-        """Test the input given in the brief
-        """
+        """Test the input given in the brief"""
         # Ensure the dictionary is initalised empty
         standings = {}
 
@@ -75,13 +75,66 @@ class TestSortStandings(unittest.TestCase):
     """
 
     def test_sort_example_data(self):
-        standings = {"Lions": 5, "Snakes": 1,
-                     "Tarantulas": 6, "FC Awesome": 1, "Grouches": 0}
+        standings = {"Lions": 5, "Snakes": 1, "Tarantulas": 6, "FC Awesome": 1, "Grouches": 0}
 
-        self.assertEqual(league.sort_standings(standings), [
-                         ('Tarantulas', 6), ('Lions', 5), ('FC Awesome', 1), 
-                         ('Snakes', 1), ('Grouches', 0)])
+        self.assertEqual(league.sort_standings(standings), {"Tarantulas": 6, "Lions": 5, "FC Awesome": 1, "Snakes": 1, "Grouches": 0})
 
+    def test_sort_case_insensitive(self):
+        standings = {"Apples": 5, "Pears": 1, "Bannana": 6, "peaches": 1, "graPes": 0}
+        self.assertEqual(league.sort_standings(standings), {"Bannana": 6, "Apples": 5, "peaches": 1, "Pears": 1, "graPes": 0})
+
+    def test_sort_number_in_name(self):
+        standings = {"team1": 1, "team2": 1}
+        self.assertEqual(league.sort_standings(standings), {"team1": 1, "team2": 1})
+
+    def test_sort_symbol_in_name(self):
+        standings = {"team@": 1, "team!": 1}
+        self.assertEqual(league.sort_standings(standings), {"team!": 1, "team@": 1})
+
+    def test_sort_score_then_alpha(self):
+        standings = {"a": 0, "b": 1, "c": 3, "d": 1}
+        self.assertEqual(league.sort_standings(standings), {"c": 3, "b": 1, "d": 1, "a": 0})
+
+
+class TestPrintStandings(unittest.TestCase):
+    """Test that the print_standings method works as intended
+
+    Some IDE's will show an error at every call of 'self.assert_stdout()'.
+    The code will run but the mocking annotation used to capture stdOut
+    is not widely recognised by IDE's"""
+
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def assert_stdout(self, standings, expected_output, mock_stdout):
+        league.print_standings(standings)
+        self.assertEqual(mock_stdout.getvalue(), expected_output)
+
+    def test_print_example_data(self):
+        standings = {"Tarantulas": 6, "Lions": 5, "FC Awesome": 1, "Snakes": 1, "Grouches": 0}
+
+        expected = "1. Tarantulas, 6 pts\n2. Lions, 5 pts\n3. FC Awesome, 1 pt\n3. Snakes, 1 pt\n5. Grouches, 0 pts\n"
+
+        self.assert_stdout(standings, expected)
+
+    def test_print_one_pt(self):
+        standings = {"FC Awesome": 1}
+
+        expected = "1. FC Awesome, 1 pt\n"
+
+        self.assert_stdout(standings, expected)
+
+    def test_print_zero_pts(self):
+        standings = {"FC Awesome": 0}
+
+        expected = "1. FC Awesome, 0 pts\n"
+
+        self.assert_stdout(standings, expected)
+
+    def test_print_many_pnts(self):
+        standings = {"Tarantulas": 56, "Lions": 5, "FC Awesome": 2}
+
+        expected = "1. Tarantulas, 56 pts\n2. Lions, 5 pts\n3. FC Awesome, 2 pts\n"
+
+        self.assert_stdout(standings, expected)
 
 
 if __name__ == "__main__":
