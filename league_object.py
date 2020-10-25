@@ -1,5 +1,15 @@
-from sortedcontainers import SortedKeyList
+"""
+A simple CLI application which calculates the ranking table of a soccer league
+given the results of every match.
 
+# This is my less preferred approach, as I do not thing that the scope of this 
+solution suits an OO style. I am including this a demonstration of how I would
+implement this in an environment where OO is the preferred style.
+
+Author: Jayan Smart <jayandrinsmart@gmail.com>
+"""
+
+from sortedcontainers import SortedKeyList
 
 class League():
 

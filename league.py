@@ -2,7 +2,7 @@
 A simple CLI application which calculates the ranking table of a soccer league
 given the results of every match.
 
-This is my prefered implimentation. This problem does not warrent going for an
+This is my preferred implimentation. This problem does not warrent going for an
 OO style of code.
 
 I am implimenting an OO approach, to show my proficiency. See league_object.py
@@ -64,7 +64,7 @@ def sort_standings(standings):
 
     # Runs the sorted function using a custom sort key:
     # The key first sorts the scores in ascending order, but as negatives
-    # (effectivly decending order). As a tie breaker the items are sorted in
+    # (effectively decending order). As a tie breaker the items are sorted in
     # alphabetical order.
     return dict(sorted(standings.items(), key=lambda x: (-x[1], x[0].lower())))
 

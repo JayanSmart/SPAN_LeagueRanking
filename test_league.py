@@ -83,9 +83,9 @@ class TestSortStandings(unittest.TestCase):
 
     def test_sort_case_insensitive(self):
         standings = {"Apples": 5, "Pears": 1,
-                     "Bannana": 6, "peaches": 1, "graPes": 0}
+                     "Banana": 6, "peaches": 1, "graPes": 0}
         self.assertEqual(league.sort_standings(standings), {
-                         "Bannana": 6, "Apples": 5, "peaches": 1, "Pears": 1,
+                         "Banana": 6, "Apples": 5, "peaches": 1, "Pears": 1,
                          "graPes": 0})
 
     def test_sort_number_in_name(self):
