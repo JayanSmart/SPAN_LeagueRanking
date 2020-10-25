@@ -1,4 +1,4 @@
-from sortedcontainers import SortedKeyList, SortedDict
+from sortedcontainers import SortedKeyList
 
 
 class League():
