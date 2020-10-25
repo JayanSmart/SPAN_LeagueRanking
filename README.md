@@ -8,8 +8,8 @@ The given brief, "BE Coding Test - Candidate.pdf", is submitted to this reposito
 
 ---
 
-This is a simple CLI application will calculate the ranking table for a
-soccer league.
+This is a simple CLI application that will calculate the ranking table for a
+soccer league, given the match results as input.
 
 ## Usage
 
