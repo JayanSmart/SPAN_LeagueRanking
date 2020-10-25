@@ -10,9 +10,11 @@ I am implimenting an OO approach, to show my proficiency. See league_object.py
 Author: Jayan Smart <jayandrinsmart@gmail.com>
 """
 
+import os
 
-POINTS_WON  = 3
+POINTS_WON = 3
 POINTS_DRAW = 1
+
 
 def process_result(result, standings):
     """Process a singe match result and update the global standings accordingly.
@@ -53,11 +55,11 @@ def sort_standings(standings):
     to the team with the least points. Ties are sorted alphabetically.
 
     Args:
-        standings (Dict): A dictionary of eache team and their assossiated
+        standings (Dict): A dictionary of each team and its assossiated
         score in the league.
 
     Returns:
-        List: A sorted list of Touples.
+        Dict: A dictionary with sorted keys.
     """
 
     # Runs the sorted function using a custom sort key:
@@ -67,7 +69,19 @@ def sort_standings(standings):
     return dict(sorted(standings.items(), key=lambda x: (-x[1], x[0].lower())))
 
 
-def print_standings(standings):
+def format_standings_string(standings):
+    """Formats the sorted summary into a string with the following format:
+    1. Team1 4 pnts
+    2. Team2 2 pnts
+    2. Team3 2 pnts
+    4. Team4 1 pt
+
+
+    Args:
+        standings (Dict): A sorted dictionary of team names and points
+    """
+
+    out = ""
     position = 0
     delta = 1
     current_score = None
@@ -81,9 +95,12 @@ def print_standings(standings):
             delta += 1
 
         if standings[team] == 1:
-            print("{}. {}, {} pt".format(position, team, standings[team]))
+            out += "{}. {}, {} pt".format(position,
+                                          team, standings[team]) + os.linesep
         else:
-            print("{}. {}, {} pts".format(position, team, standings[team]))
+            out += "{}. {}, {} pts".format(position,
+                                           team, standings[team]) + os.linesep
+    return out.strip()
 
 
 def main():
@@ -96,7 +113,7 @@ def main():
         standings = process_result(line, standings)
         line = input()
     standings = sort_standings(standings)
-    print_standings(standings)
+    print(format_standings_string(standings))
 
 
 if __name__ == "__main__":

@@ -50,6 +50,16 @@ class League():
         self.standings.add({"team": team, "points": points})
 
     def __str__(self):
+        """Formats the standings object into a printable string using the 
+        following format:
+            1. Team1 4 pnts
+            2. Team2 2 pnts
+            2. Team3 2 pnts
+            4. Team4 1 pt
+
+        Returns:
+            String: A formatted string of the standings object.
+        """
         out = ""
 
         position = 0
