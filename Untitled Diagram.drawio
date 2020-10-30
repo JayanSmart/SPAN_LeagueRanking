@@ -1,1 +1,95 @@
-<mxfile host="app.diagrams.net" modified="2020-10-30T11:50:09.986Z" agent="5.0 (X11)" etag="bQha0xbEn_VxtdD1K499" version="13.8.8" type="github"><diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">7Vttb5s6GP01SHcfVoEJSfuxYckmLbmr2m77eOWCA9YIRsZ526+fDTaEOGlhd2m8JlLUwMMTg59zfGyfJpbrz9cfKcziKQlRYgE7XFvuBwsABwCXv4nIpowMbgZlIKI4lEl14AH/RDJoy+gChyhvJDJCEoazZjAgaYoC1ohBSsmqmTYjSfOuGYyQFngIYKJHv+OQxWX02rPr+CeEo1jd2bHllTlUyTKQxzAkq0YIrdmYpEw+4h2ic5iilPErU0h/IGp5o5gx0dNbC4z5ayayryJCogTBDOdXAZnzcJDzlPEMznEiyrzV0FA2xG/njizXp4Sw8mi+9lEisFIwlM80PnC1qgMV7bb4gP9+uZn8sFn6aeV+Y9NpdDd4ei9bWcJkIesra8M2quAo5PWXp/xWmG3uUQIZJumovjJEaXgr0OVJo/ufiJJHMoUp7/wwZ5Cy+hpJZfoY88dzPzgqRZ7b/FzvmnzOnCxogJ7pD+hJSkIaIfZMYl8CHjbYJiv3EZE5YnTDE1Y1xyomxdv8UkFaFGXZZCmUTIqqBqt73BFcEEsOTLcn21HDUlFSNVF2XX5qG+adhno7DfV3GypLozXED7Y6XocKFnVhFHhjlHJbMsoZGEapnt1kgnP9u5TqNxsCtveqlNIZ9YWGiOYar7iiZ+KQwaeCQQUJ5BTmChbwSYlBnHL9LVkSkCSBWY6L9DIS4yScwA1ZMNWQOhvO8BqF9+UMJnI5/ya8sVxSTMwFitXiMkxwlPLjgFNO3HFIUc6fZQJzJjMOknKJKEPrZ1mksPF2QFbDfYtlwNvHMtc+TKgGgl3hcl8WAAUU7zrDMLnnCwWYRgVmTUhEXUNKskc1+kQgE0RDdLRE5VRdFJ8PdZ8kRCCbloJQpBWd84b8xbvr21ee5fEH8Pm5U5/zl0inzCdpzijEBRyIA7VCAqwhI5m8T4Jm6jGoLKY4fiKM8Zn/EKzP0vplrCW2bktoj4ZsT0P27nMXbAnv6ywpVDvGYYjSckiKdSKs8d4D5d76VzXfBWN3ILbEw22NxxYA7mvW39PqT4QQ/sc/5APr1i5V+98vj+Lv18nEqpa6JsGjdLHMHeYZDHAaTcpP9nfw846B39o6OJ7Aa+LZP2el3L8q+zNK2T+1Ug40ZMefnS7gvtJYbAlAvzUAp5LGa63gwSLnfS7VEeyRRuOweFEX/zhYpujgzUUHj6ODN6fWQeUa/ia0ZqngTevyn0oFHd3PK1eIIWSIx+XbWchge7RMkUFH3zk/xDibF6J18To0rwNct5S343kdjr4lPqOpq8Pm2mm/OzPF7XD07fZbsjsq6ho8nekb5FwK4sXz6AqiMbOcvjc+I8nssNzsLpkntz0cfRv+V/seFVcN1kh981yZwmdle3TAyhQpBP9vd3yRQoOdD6BvxQ0cfC3rXxHVXB1U5d23VjxD96MDYsaooW5/+NLDv9gf1tZXOzp/1cM+GmQX+6PlcPz77A/wtu0PYL79AXT746V/ap6T99EBQWOmuIv3cSy9PLn3AXTvw8DB2Lb+5hsfQDc+KnVM4Vys9IMY0n88+93ZLPpNskD4af3jlvKr4PUvktzRLw==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-10-30T13:12:33.325Z" agent="5.0 (X11)" etag="S_qQOz7hUz85mj7cwSwY" version="13.8.8" type="github" pages="3">
+  <diagram id="dmX9B6sVz-fL4z1EFivn" name="Overview">
+    <mxGraphModel dx="1422" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="d-0ryNoq4XntB6IHzyKQ-0" />
+        <mxCell id="d-0ryNoq4XntB6IHzyKQ-1" parent="d-0ryNoq4XntB6IHzyKQ-0" />
+        <mxCell id="-odkcJFWTVdj9C6D5_yw-0" value="&lt;u&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Electric Motorbike Data flow design&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="d-0ryNoq4XntB6IHzyKQ-1">
+          <mxGeometry x="10" y="20" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-odkcJFWTVdj9C6D5_yw-1" value="&lt;h1&gt;Assumptions&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Factory Has warehouse with all parts. Dealers either order in parts or send in bike.&lt;/li&gt;&lt;li&gt;Bike has CAN BUS interface and onboard computer which can track all relevant statistics (including location)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="d-0ryNoq4XntB6IHzyKQ-1">
+          <mxGeometry x="40" y="80" width="720" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Data Flows">
+    <mxGraphModel dx="1422" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-1" value="&lt;u&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Electric Motorbike Data flow design&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="i3oIKMcPbhqeic2sQeAc-4" target="i3oIKMcPbhqeic2sQeAc-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-4" value="BOM + Bike serial" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-5" value="Backend" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="i3oIKMcPbhqeic2sQeAc-9" target="i3oIKMcPbhqeic2sQeAc-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-9" value="Bike Data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="i3oIKMcPbhqeic2sQeAc-10" target="i3oIKMcPbhqeic2sQeAc-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-10" value="User Phone:&lt;br&gt;Can stop data flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-11" value="Backend" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="i3oIKMcPbhqeic2sQeAc-14" target="i3oIKMcPbhqeic2sQeAc-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-14" value="Backend" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-15" value="Dealer Interface" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-16" value="User Phone" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="i3oIKMcPbhqeic2sQeAc-17" target="i3oIKMcPbhqeic2sQeAc-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i3oIKMcPbhqeic2sQeAc-17" value="Backend" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNioVfYiJNHRahVCBNnk-1" value="&lt;h1&gt;Bike to Phone&lt;br&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Bike on board computer gathers data and can be asked for this data through CAN BUS&lt;/li&gt;&lt;li&gt;Interface Chip can use the following technologies:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;NFC (i like this one) Include charging&lt;br&gt;&lt;/li&gt;&lt;li&gt;Wifi -&amp;gt; this can be home wifi but must be configured on App.&lt;/li&gt;&lt;li&gt;Wired -&amp;gt; USB3.1 this is really there for inital configuration and a non-wifi backup.&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Can be extended for manufacturers no in my scope &lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;li&gt;Phone polls interface chip for data using REST JSON calls or whatever the NFC equivalent is&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="680" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="wNioVfYiJNHRahVCBNnk-2" value="&lt;h1&gt;Phone to Backend&lt;br&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Phone app manages privacy and what can get sent&lt;/li&gt;&lt;li&gt;Data is pushed to backend using REST JSON calls&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="740" width="720" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wNioVfYiJNHRahVCBNnk-4" value="&lt;h1&gt;BOM to backend&lt;br&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;When a bike is sold by the dealer, they will upload the BOM file, bike serial as well as the owners details to the Web frontend&lt;br&gt;&lt;/li&gt;&lt;li&gt;BOM is processed by backend as stored in a DB&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="880" width="720" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wNioVfYiJNHRahVCBNnk-5" value="&lt;h1&gt;Backend to dealer&lt;br&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Dealers can log into web interface and request details about a bike (not location data) &lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;This can be service history, contact info for owner etc.&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1000" width="720" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wNioVfYiJNHRahVCBNnk-6" value="&lt;h1&gt;Backend to App&lt;br&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Dealers can request owner bring in bikes/notify for collection&lt;/li&gt;&lt;li&gt;THis info can push to user app&lt;/li&gt;&lt;li&gt;App can also pull bike history/locationdata/service etc.&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1120" width="720" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="UGS2RZQgrHsv7my8n43g" name="Page-3">
+    <mxGraphModel dx="1422" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="b6jP5XJFVmoaYZni4EFw-0" />
+        <mxCell id="b6jP5XJFVmoaYZni4EFw-1" parent="b6jP5XJFVmoaYZni4EFw-0" />
+        <mxCell id="8mkuHxTDXgX2zjkzyQGW-0" value="&lt;h1&gt;The Backend&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Django Backend using some SQL DB (postgresql?) &lt;br&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Backend will manage user logins (different user levels)&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Management (can get overall info about all bikes to detect trends etc)&lt;/li&gt;&lt;li&gt;Dealer (can get info about any bike from serial or user) limits to users private info such as location&lt;/li&gt;&lt;li&gt;User (can get all info about their bike)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Use cases:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Dealer sells bike&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Upload BOM file, with serial number and all user info)&lt;/li&gt;&lt;li&gt;BOM is processed and stored in db with other data&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Bike Service&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Dealer uploads updated BOM file which is processed and history is stored in DB&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;User requests info:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;User pulls all/some data about their bike(s)&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;App requests info&lt;/li&gt;&lt;ul&gt;&lt;li&gt;REST call to backend returns app data&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Dealers contacts customer app&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Push data to backend &lt;br&gt;&lt;/li&gt;&lt;li&gt;Rest call to the APP&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="b6jP5XJFVmoaYZni4EFw-1">
+          <mxGeometry x="40" y="40" width="720" height="440" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
